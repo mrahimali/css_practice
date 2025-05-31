@@ -4,7 +4,7 @@
     align-items: center;
 }
 .card{
-    width: 190px;
+    width: 400px;
     height: 254px;
     background:#07182E;
     color: white;
@@ -15,19 +15,30 @@
     overflow: hidden;
     border-radius: 20px;
 }
+.card .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    font-family:sans-serif;
+    z-index: 1;
+}
 
 .card h2{
-    z-index: 1;
     color: rgb(235, 26, 26);
     font-size: 2em;
 }
 
+.card p{
+    color: black;
+}
 .card::before{
     content: '';
     position: absolute;
     width: 100px;
     background-image: linear-gradient(180deg, rgb(0,183,255), rgb(255,48,255));
-    height: 130%;
+    height: 200%;
     animation: rotBGimg 3s linear infinite;
     transition: all 0.2s linear;
 }
@@ -42,7 +53,7 @@
 .card::after{
     content: '';
     position: absolute;
-    background:#07182E;
+    background:#748eb1;
     inset: 5px;
     border-radius: 15px;
 }
